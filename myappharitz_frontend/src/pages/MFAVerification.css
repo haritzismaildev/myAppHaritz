@@ -1,0 +1,51 @@
+.mfa-container {
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.mfa-message {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.mfa-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.mfa-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mfa-button:hover {
+  background-color: #0056b3;
+}

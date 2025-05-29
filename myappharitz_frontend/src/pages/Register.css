@@ -1,0 +1,88 @@
+.register-container {
+  width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.register-message {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.register-button {
+  background: #ff4d4d;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background: #cc0000;
+}
+
+.back-button {
+  background: #fff;
+  color: #ff6b6b;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background: #e0e0e0;
+  transform: scale(1.03);
+}
