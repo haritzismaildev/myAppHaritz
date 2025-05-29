@@ -1,0 +1,39 @@
+services:
+  # Service Database
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: ms_sql_server
+    environment:
+      - SA_PASSWORD=YourStrong@Passw0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+  # Service Backend (ASP.NET Core)
+  backend:
+    build:
+      context: ./myAppHaritz       # Context root untuk backend
+      dockerfile: MyAppHaritz.Api/Dockerfile  # Lokasi Dockerfile dalam folder backend
+    container_name: myappharitz_backend
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # Connection string menggunakan nama service Docker (db)
+      - ConnectionStrings__DefaultConnection=Server=db;Database=MyAppDB;User Id=sa;Password=YourStrong@Passw0rd;
+    ports:
+      - "7164:80"  # Akses API melalui port 7164 di host
+
+  # Service Frontend (React/Vite)
+  frontend:
+    build:
+      context: ./myAppHaritz_frontend
+      dockerfile: Dockerfile
+    container_name: myappharitz_frontend
+    ports:
+      - "5173:80"  # Akses aplikasi frontend melalui port 5173 di host
+
+volumes:
+  mssql_data:
