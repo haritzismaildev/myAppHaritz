@@ -19,8 +19,4 @@
     <ProjectReference Include="..\myAppHaritz.Infrastructure\myAppHaritz.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dockerfile\" />
-  </ItemGroup>
-
 </Project>
